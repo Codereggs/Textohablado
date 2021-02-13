@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Hablando</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    body {
+        background-image: url(https://fondosmil.com/fondo/20884.jpg);
+    }
+    .container {
+        margin: 5vh auto;
+        text-align: center;
+        background-color:rgb(233, 250, 255);
+        border: 2px rgb(127, 179, 180) solid;
+        width: 120vh;
+    }
+
+    .container textarea {
+        margin-bottom: 0.1vh;
+        width:50%;
+        border-radius: 5px;
+        box-shadow:rgb(167, 167, 167) 0px 3px 10px;
+        resize: none;
+        font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    h1{
+        font-family: 'Ranchers', cursive;;
+    }
+    .container div {
+        margin: 3vh auto;
+        text-align: center;
+        background-color:rgb(233, 250, 255);
+
+    }
+    button{
+        font-family: 'Lato', sans-serif;
+        background-color: rgb(233, 250, 255);
+        border-color: rgb(127, 179, 180);
+        border-radius: 5px;
+        width: 20vh;
+        height: 5vh;
+        font-size: large;
+        font-weight: bold;
+        
+    }
+
+    button:hover, button:focus {
+        background-color:rgb(133, 227, 255);
+    }
+
+    button:active {
+        background-color: rgb(233, 250, 255);
+    }
+   
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Texto hablado</h1>
+     
+    <textarea name="texto" id="texto" cols="30" rows="10">Escribe aquí el texto que quieres reproducir.</textarea> 
+    <div> <button id="boton" class="boton" type="submit">Reproducir</button></div>
+   
+    <!-- <input id="texto" type="text" value="Escribe aquí el texto que quieres reproducir."> -->
+   
+
+</div>
+
+
+</body>
+<script src="codigo.js"></script>
+</html>
