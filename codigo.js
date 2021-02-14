@@ -1,12 +1,12 @@
 // Reproducir voz con distintos parámetros
-let sintesis = window.speechSynthesis;
+let sintesis = speechSynthesis;
 
 let form = document.querySelector("form");
 let texto = document.querySelector("textarea");
 let selectorVoz = document.querySelector("select");
 let download = document.getElementById("download");
 
-function populateVoiceList() {
+const listaDeVoces = () => {
   voices = sintesis.getVoices();
 
   for (i = 0; i < voices.length; i++) {
@@ -21,14 +21,13 @@ function populateVoiceList() {
     option.setAttribute("data-name", voices[i].name);
     selectorVoz.appendChild(option);
   }
-}
+};
 
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
-}
+listaDeVoces();
+if (speechSynthesis.onvoiceschanged !== undefined)
+  speechSynthesis.onvoiceschanged = listaDeVoces;
 
-form.onsubmit = function (event) {
+form.onsubmit = (event) => {
   event.preventDefault();
 
   let utterThis = new SpeechSynthesisUtterance(texto.value);
